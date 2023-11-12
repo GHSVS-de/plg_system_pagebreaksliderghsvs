@@ -85,8 +85,8 @@ class PagebreakSliderGhsvsHelper
 					$collector[] = HTMLHelper::_(
 						'pagebreaksliderghsvs.startAccordion',
 						$selector,
-							/* Damit nur 1 Slide geöffnet werden kann, wird ein parent gesetzt!
-							Wenn multiSelectable=0 => parent=TRUE */
+						/* Damit nur 1 Slide geöffnet werden kann, wird ein parent gesetzt!
+						Wenn multiSelectable=0 => parent=TRUE */
 						// 'parent' => !$pluginParams->get('multiSelectable', 0),
 						$pluginParams->toArray(),
 					);
@@ -161,7 +161,7 @@ class PagebreakSliderGhsvsHelper
 		}
 	}
 
-	public function getPluginParams($plugin = ['system', 'pagebreaksliderghsvs'])
+	private function getPluginParams($plugin = ['system', 'pagebreaksliderghsvs'])
 	{
 		if (empty($this->pluginParams) || !($this->pluginParams instanceof Registry))
 		{
@@ -183,5 +183,19 @@ class PagebreakSliderGhsvsHelper
 			}
 		}
 		return $this->pluginParams;
+	}
+
+	/*
+	Call from outside. Example.
+
+	PagebreakSliderGhsvsHelper::buildSlidersStatic(
+	 $html,
+	 $module->id, // Optional. If none set a uniqe id will be created by the helper.
+	 $options // Optional
+	);
+	*/
+	public static function buildSlidersStatic(&$theText, $id = null, $options = null)
+	{
+		(new self())->buildSliders($theText, $id, $options);
 	}
 }

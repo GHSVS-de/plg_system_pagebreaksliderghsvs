@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="{{type}}" client="{{client}}" group="{{folder}}" method="{{method}}">
+	<name>{{nameUpper}}</name>
+	<author>{{authorName}}</author>
+	<creationDate>{{creationDate}}</creationDate>
+	<copyright>{{copyright}}</copyright>
+	<license>{{licenseLong}}</license>
+	<authorUrl>{{authorUrl}}</authorUrl>
+	<version>{{version}}</version>
+	<description>{{nameUpper}}_XML_DESCRIPTION</description>
+
+	<updateservers><server type="extension" priority="1" name="{{nameUpper}}">{{xmlserver}}/{{name}}-update.xml</server></updateservers>
+
+	<infourl>{{infourl}}</infourl>
+
+	<scriptfile>installerScript.php</scriptfile>
+	<minimumPhp>{{minimumPhp}}</minimumPhp>
+	<maximumPhp>{{maximumPhp}}</maximumPhp>
+	<minimumJoomla>{{minimumJoomla}}</minimumJoomla>
+	<maximumJoomla>{{maximumJoomla}}</maximumJoomla>
+	<allowDowngrades>{{allowDowngrades}}</allowDowngrades>
+
+	<files>
+		<folder>language</folder>
+		<folder plugin="{{filename}}">services</folder>
+		<folder>src</folder>
+		<filename>installerScript.php</filename>
+		<filename>LICENSE.txt</filename>
+	</files>
+	{{namespace}}
+	<config{{addfieldprefix}}>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field type="hidden" default="1" name="{{filename}}plugin"/>
+
+				<field name="version" type="Version"
+					label="JVERSION"/>
+
+			</fieldset><!--/basic-->
+
+			<fieldset name="FieldsetPagebreak"
+				label="Pagebreakghsvs-Slider"
+				description="Im Zusammenspiel mit Editor-Plugin 'pagebreakghsvs' (Button for Editors (insert slide markers) by GHSVS.de)">
+
+				<field name="toggleContainer" type="text" default="div" filter="string"
+					label="HTML-Container für Slide-Toggler [toggleContainer]"
+					/>
+
+				<field name="headingTagGhsvs" type="text" default="h4" filter="string"
+					label="Headline-Tag für Slider-Überschrift [headingTagGhsvs]"
+					/>
+
+				<field name="activeToSession" type="list" default="0" filter="integer"
+					label="Aktive IDs in Session schreiben mit Ajax-Plugin [activeToSession]"
+					>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+
+				<field name="multiSelectable" type="list" default="0" filter="integer"
+					label="Mehrere Slides können gleichzeitig geöffnet sein?"
+					>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+
+				<field name="scrollToSliderHeadSpacer" type="note" close="true"
+					class="alert alert-warning mb-0 w-100" showon="multiSelectable:0"
+					label="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_SCROLLTOSLIDERHEAD"
+					description="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_SCROLLTOSLIDERHEAD_DESC"/>
+
+				<field name="scrollToSliderHead" type="list" default="0" filter="integer"
+					showon="multiSelectable:0"
+					label="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_SCROLLTOSLIDERHEAD">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+
+			</fieldset><!--/FieldsetPagebreak-->
+		</fields>
+	</config>
+</extension>

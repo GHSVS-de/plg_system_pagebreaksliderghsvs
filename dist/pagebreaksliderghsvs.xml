@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" client="site" group="system" method="upgrade">
+	<name>PLG_SYSTEM_PAGEBREAKSLIDERGHSVS</name>
+	<author>G@HService Berlin Neukölln, Volkmar Volli Schlothauer</author>
+	<creationDate>2023-11-06</creationDate>
+	<copyright>(C) 2023, G@HService Berlin Neukölln, Volkmar Volli Schlothauer.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt.</license>
+	<authorUrl>https://ghsvs.de</authorUrl>
+	<version>2023.11.06</version>
+	<description>PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_XML_DESCRIPTION</description>
+
+	<updateservers><server type="extension" priority="1" name="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/plg_system_pagebreaksliderghsvs-update.xml</server></updateservers>
+
+	<infourl>https://github.com/GHSVS-de/plg_system_pagebreaksliderghsvs/releases/tag/2023.11.06</infourl>
+
+	<scriptfile>installerScript.php</scriptfile>
+	<minimumPhp>7.4.0</minimumPhp>
+	<maximumPhp></maximumPhp>
+	<minimumJoomla>4.3.0</minimumJoomla>
+	<maximumJoomla>5.9999.9999</maximumJoomla>
+	<allowDowngrades>1</allowDowngrades>
+
+	<files>
+		<folder>language</folder>
+		<folder plugin="pagebreaksliderghsvs">services</folder>
+		<folder>src</folder>
+		<filename>installerScript.php</filename>
+		<filename>LICENSE.txt</filename>
+	</files>
+	<namespace path="src">GHSVS\Plugin\System\PagebreakSliderGhsvs</namespace>
+	<config addfieldprefix="GHSVS\Plugin\System\PagebreakSliderGhsvs\Field">
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field type="hidden" default="1" name="pagebreaksliderghsvsplugin"/>
+
+				<field name="version" type="Version"
+					label="JVERSION"/>
+
+			</fieldset><!--/basic-->
+
+			<fieldset name="FieldsetPagebreak"
+				label="Pagebreakghsvs-Slider"
+				description="Im Zusammenspiel mit Editor-Plugin 'pagebreakghsvs' (Button for Editors (insert slide markers) by GHSVS.de)">
+
+				<field name="toggleContainer" type="text" default="div" filter="string"
+					label="HTML-Container für Slide-Toggler [toggleContainer]"
+					/>
+
+				<field name="headingTagGhsvs" type="text" default="h4" filter="string"
+					label="Headline-Tag für Slider-Überschrift [headingTagGhsvs]"
+					/>
+
+				<field name="activeToSession" type="list" default="1" filter="integer"
+					label="Aktive IDs in Session schreiben mit Ajax-Plugin [activeToSession]"
+					>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+
+				<field name="multiSelectable" type="list" default="0" filter="integer"
+					label="Mehrere Slides können gleichzeitig geöffnet sein?"
+					>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+
+			</fieldset><!--/FieldsetPagebreak-->
+		</fields>
+	</config>
+</extension>

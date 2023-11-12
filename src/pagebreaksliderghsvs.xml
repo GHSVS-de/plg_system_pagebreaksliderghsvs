@@ -47,9 +47,13 @@
 					label="HTML-Container für Slide-Toggler [toggleContainer]"
 					/>
 
+				<field name="headingTagGhsvsSpacer" type="note" close="true"
+					class="alert alert-info mb-0 w-100"
+					label="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_HEADINGTAGGHSVS"
+					description="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_HEADINGTAGGHSVS_DESC"/>
+
 				<field name="headingTagGhsvs" type="text" default="h4" filter="string"
-					label="Headline-Tag für Slider-Überschrift [headingTagGhsvs]"
-					/>
+					label="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_HEADINGTAGGHSVS" />
 
 				<field name="activeToSession" type="list" default="0" filter="integer"
 					label="Aktive IDs in Session schreiben mit Ajax-Plugin [activeToSession]"

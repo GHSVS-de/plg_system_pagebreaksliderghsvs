@@ -6,12 +6,12 @@
 	<copyright>(C) 2023, G@HService Berlin Neukölln, Volkmar Volli Schlothauer.</copyright>
 	<license>GNU General Public License version 3 or later; see LICENSE.txt.</license>
 	<authorUrl>https://ghsvs.de</authorUrl>
-	<version>2023.11.07</version>
+	<version>2023.11.08</version>
 	<description>PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_XML_DESCRIPTION</description>
 
 	<updateservers><server type="extension" priority="1" name="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/plg_system_pagebreaksliderghsvs-update.xml</server></updateservers>
 
-	<infourl>https://github.com/GHSVS-de/plg_system_pagebreaksliderghsvs/releases/tag/2023.11.07</infourl>
+	<infourl>https://github.com/GHSVS-de/plg_system_pagebreaksliderghsvs/releases/tag/2023.11.08</infourl>
 
 	<scriptfile>installerScript.php</scriptfile>
 	<minimumPhp>7.4.0</minimumPhp>
@@ -47,9 +47,13 @@
 					label="HTML-Container für Slide-Toggler [toggleContainer]"
 					/>
 
+				<field name="headingTagGhsvsSpacer" type="note" close="true"
+					class="alert alert-info mb-0 w-100"
+					label="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_HEADINGTAGGHSVS"
+					description="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_HEADINGTAGGHSVS_DESC"/>
+
 				<field name="headingTagGhsvs" type="text" default="h4" filter="string"
-					label="Headline-Tag für Slider-Überschrift [headingTagGhsvs]"
-					/>
+					label="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_HEADINGTAGGHSVS" />
 
 				<field name="activeToSession" type="list" default="0" filter="integer"
 					label="Aktive IDs in Session schreiben mit Ajax-Plugin [activeToSession]"

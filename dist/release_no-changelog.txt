@@ -1,27 +1,25 @@
-2023.11.07
+2023.11.08
 
-Joomla system plugin PagebreakSliderGhsvs 2023.11.07
+Joomla system plugin PagebreakSliderGhsvs 2023.11.08
 
 Joomla system plugin. Replaces placeholders of the type {pagebreakghsvs-slider ...} in an article with accordion sliders. Uses bootstrap collapse feature.
 
-### Joomla 4.3+, Joomla 5
-
 ### Download
-[plg_system_pagebreaksliderghsvs-2023.11.07.zip](https://github.com/GHSVS-de/plg_system_pagebreaksliderghsvs/raw/2023.11.07/dist/plg_system_pagebreaksliderghsvs-2023.11.07.zip)
+[plg_system_pagebreaksliderghsvs-2023.11.08.zip](https://github.com/GHSVS-de/plg_system_pagebreaksliderghsvs/raw/2023.11.08/dist/plg_system_pagebreaksliderghsvs-2023.11.08.zip)
 
 ### Joomla-Target-Platform(s)
 4\.(3|4|5|6|7|8|9|10|11|12|13|14|15), 5.&ast;
 
 ### For the interested ones
-- Initial release.
+- Add also a static `PagebreakSliderGhsvsHelper::buildSlidersStatic()`
 - Deutsche Beschreibung:
 - English Description:
-- [Compare releases 2023.11.07...2023.11.07](https://github.com/GHSVS-de/plg_system_pagebreaksliderghsvs/compare/2023.11.07...2023.11.07)
+- [Compare releases 2023.11.07...2023.11.08](https://github.com/GHSVS-de/plg_system_pagebreaksliderghsvs/compare/2023.11.07...2023.11.08)
 - minimumJoomla: 4.3.0
 - maximumJoomla: 5.9999.9999
 - minimumPhp: 7.4.0
 - maximumPhp:
-- Checksum: `<sha256>c0c8f7ed5c4d471d3a484887c51801b98df4a9c23e9df96ffa07c68c9d97950c</sha256>`
+- Checksum: `<sha256>901b9e576142dde48f04f68a0c2d2eac83b71d02fdcc0ac834dc330516f3c064</sha256>`
 - Readme: https://github.com/GHSVS-de/plg_system_pagebreaksliderghsvs#readme
 - Updates XML: https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/plg_system_pagebreaksliderghsvs-update.xml
 - Last tests: PHP 8.2<br>Joomla 4.4<br>Joomla 5.0

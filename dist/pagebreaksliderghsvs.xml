@@ -6,12 +6,12 @@
 	<copyright>(C) 2023, G@HService Berlin Neukölln, Volkmar Volli Schlothauer.</copyright>
 	<license>GNU General Public License version 3 or later; see LICENSE.txt.</license>
 	<authorUrl>https://ghsvs.de</authorUrl>
-	<version>2023.11.06</version>
+	<version>2023.11.07</version>
 	<description>PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_XML_DESCRIPTION</description>
 
 	<updateservers><server type="extension" priority="1" name="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/plg_system_pagebreaksliderghsvs-update.xml</server></updateservers>
 
-	<infourl>https://github.com/GHSVS-de/plg_system_pagebreaksliderghsvs/releases/tag/2023.11.06</infourl>
+	<infourl>https://github.com/GHSVS-de/plg_system_pagebreaksliderghsvs/releases/tag/2023.11.07</infourl>
 
 	<scriptfile>installerScript.php</scriptfile>
 	<minimumPhp>7.4.0</minimumPhp>
@@ -51,7 +51,7 @@
 					label="Headline-Tag für Slider-Überschrift [headingTagGhsvs]"
 					/>
 
-				<field name="activeToSession" type="list" default="1" filter="integer"
+				<field name="activeToSession" type="list" default="0" filter="integer"
 					label="Aktive IDs in Session schreiben mit Ajax-Plugin [activeToSession]"
 					>
 						<option value="1">JYES</option>
@@ -61,6 +61,18 @@
 				<field name="multiSelectable" type="list" default="0" filter="integer"
 					label="Mehrere Slides können gleichzeitig geöffnet sein?"
 					>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+
+				<field name="scrollToSliderHeadSpacer" type="note" close="true"
+					class="alert alert-warning mb-0 w-100" showon="multiSelectable:0"
+					label="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_SCROLLTOSLIDERHEAD"
+					description="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_SCROLLTOSLIDERHEAD_DESC"/>
+
+				<field name="scrollToSliderHead" type="list" default="0" filter="integer"
+					showon="multiSelectable:0"
+					label="PLG_SYSTEM_PAGEBREAKSLIDERGHSVS_SCROLLTOSLIDERHEAD">
 						<option value="1">JYES</option>
 						<option value="0">JNO</option>
 				</field>

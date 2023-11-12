@@ -9,6 +9,55 @@ Editor button: https://github.com/GHSVS-de/plg_editors-xtd_pagebreakghsvs/releas
 
 ## Examples
 
+### Use the PagebreakSliderGhsvsHelper from outside
+
+A) Boot plugin
+
+```
+use Joomla\CMS\Factory;
+
+...
+
+// Optional. If empty or not set the plugin parameters rule.
+$options = [
+ 'headingTagGhsvs' => 'h2',
+ 'activeToSession' => 0,
+ 'parent' => true,
+ 'toggleContainer' => 'div',
+];
+
+$html = '{pagebreakghsvs-slider title="Blah Blah Blah"}' . 'I am the text.';
+
+Factory::getApplication()->bootPlugin('pagebreaksliderghsvs', 'system')
+	->helper->buildSliders(
+		$html,
+		$id, // Optional. If none set a uniqe id will be created by the helper.
+		$options // Optional
+	);
+
+echo $html;
+```
+
+B) Use static method
+```
+use GHSVS\Plugin\System\PagebreakSliderGhsvs\Helper\PagebreakSliderGhsvsHelper;
+
+...
+
+// Optional. If empty or not set the plugin parameters rule.
+$options = [];
+
+$html = '{pagebreakghsvs-slider title="Blah Blah Blah"}' . 'I am the text.';
+
+PagebreakSliderGhsvsHelper::buildSlidersStatic(
+ $html,
+ $id, // Optional. If none set a uniqe id will be created by the helper.
+ $options // Optional
+);
+
+echo $html;
+```
+
 ----------------------
 
 # My personal build procedure (WSL 1, Debian, Win 10)

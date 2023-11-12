@@ -22,7 +22,7 @@ final class PagebreakSliderGhsvs extends CMSPlugin
 	 */
 	protected $autoloadLanguage = true;
 
-	private $helper;
+	public $helper;
 
 	public function __construct(
 		DispatcherInterface $dispatcher,
